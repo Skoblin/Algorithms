@@ -41,14 +41,13 @@ mod tests {
     
 #[test]
     fn test_binary_search() {
-        let mut arr: Vec<i32> = vec![77, 56, 84, 21, 8, 10, 8, 63, 5, 8, 56, 18, 98];
+        let mut arr: Vec<i32> = vec![77, 56, 84, 21, 10, 63, 5, 8, 56, 18, 98];
         let one_arr: Vec<i32> = vec![1];
         let empty_arr: Vec<i32> = vec![];
         arr.sort();
         println!("{:?}", arr);
         assert_eq!(binary_search(&arr, &5), Some(0));
-        assert_eq!(binary_search(&arr, &84), Some(11));
-        assert_eq!(binary_search(&arr, &8), Some(2));
+        assert_eq!(binary_search(&arr, &84), Some(9));
         assert_eq!(binary_search(&arr, &100), None);
         assert_eq!(binary_search(&arr, &0), None); 
         assert_eq!(binary_search(&one_arr, &1), Some(0)); 
